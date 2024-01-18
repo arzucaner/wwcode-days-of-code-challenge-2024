@@ -1,0 +1,34 @@
+Question:
+
+Complete the function that receives as input a string, and produces outputs according to the following table:
+
+Input	Output
+"Jabroni"	"Patron Tequila"
+"School Counselor"	"Anything with Alcohol"
+"Programmer"	"Hipster Craft Beer"
+"Bike Gang Member"	"Moonshine"
+"Politician"	"Your tax dollars"
+"Rapper"	"Cristal"
+anything else	"Beer"
+
+Solution:
+
+function getDrinkByProfession(param) {   
+    const paramLower = param.toLowerCase();
+
+    if (paramLower === "jabroni") {
+        return "Patron Tequila";
+    } else if (paramLower === "school counselor") {
+        return "Anything with Alcohol";
+    } else if (paramLower === "programmer") {
+        return "Hipster Craft Beer";
+    } else if (paramLower === "bike gang member") {
+        return "Moonshine";
+    } else if (paramLower === "politician") {
+        return "Your tax dollars";
+    } else if (paramLower === "rapper") {
+        return "Cristal";
+    } else {
+        return "Beer";
+    }
+}
