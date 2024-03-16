@@ -1,0 +1,42 @@
+Question:
+
+This is a rather simple but interesting kata. Try to solve it using logic. The shortest solution can be fit into one line.
+
+Task
+The point is that a natural number N (1 <= N <= 10^9) is given. You need to write a function which finds the number of natural numbers not exceeding N and not divided by any of the numbers [2, 3, 5].
+
+Example
+Let's take the number 5 as an example:
+
+1 - doesn't divide integer by 2, 3, and 5
+2 - divides integer by 2
+3 - divides integer by 3
+4 - divides integer by 2
+5 - divides integer by 5
+Answer: 1
+
+because only one number doesn't divide integer by any of 2, 3, 5
+
+Solution:
+
+function realNumbers(n) {
+    const primes = [2, 3, 5];
+    let result = n;
+    
+    for (let i = 1; i < (1 << primes.length); i++) {
+        let divisor = 1;
+        let bits = 0;
+        for (let j = 0; j < primes.length; j++) {
+            if (i & (1 << j)) {
+                bits++;
+                divisor *= primes[j];
+            }
+        }
+        if (bits === 0) continue;
+        
+        if (bits % 2 === 1) {
+            result -= Math.floor(n / divisor);
+        } else {
+            result += Math.floor(n / divisor);
+        }
+    }
