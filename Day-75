@@ -1,0 +1,15 @@
+Question:
+
+function toNumberArray(stringarray) {
+    return stringarray.map(function(str) {
+        return parseFloat(str);
+    });
+}
+
+Solution:
+
+function toNumberArray(stringarray) {
+    return stringarray.map(function(str) {
+        return parseFloat(str);
+    });
+}
