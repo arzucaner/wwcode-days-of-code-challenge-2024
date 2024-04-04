@@ -1,0 +1,10 @@
+Question: 
+
+Oh no, Timmy's filter doesn't seem to be working? Your task is to fix the FilterNumber function to remove all the numbers from the string.
+
+
+Solution:
+
+var FilterNumbers = function(str) {
+  return str.split('').filter(c => isNaN(parseInt(c))).join('');
+}
