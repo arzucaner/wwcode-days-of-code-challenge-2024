@@ -1,0 +1,28 @@
+Question:
+
+Should be easy, begin by looking at the code. Debug the code and the functions should work.
+
+There are three functions: Multiplication (x) Addition (+) and Reverse (!esreveR)
+
+
+Solution:
+
+function multi(arr) {
+    var result = 1; 
+    for (var i = 0; i < arr.length; i++) {
+        result *= arr[i];
+    }
+    return result; 
+}
+
+function add(arr) {
+    var result = 0; 
+    for (var i = 0; i < arr.length; i++) {
+        result += arr[i]; 
+    }
+    return result;
+}
+
+function reverse(str) {
+    return str.split('').reverse().join(''); 
+}
